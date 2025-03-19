@@ -10,7 +10,11 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://communian-app.vercel.app", // Allow only your frontend
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true
+}));
 
 // Connect to MongoDB
 connectDB(); // This will call the function from db.js
