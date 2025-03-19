@@ -10,7 +10,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/auth/register", { email, password });
+      await axios.post(`${process.env.REACT_APP_API_URL}/auth/register`, { email, password });
       alert("Registration successful! Please login.");
       navigate("/login");
     } catch (error) {
@@ -29,9 +29,9 @@ const Register = () => {
 };
 
 const styles = {
- Reg: {
-    marginTop : "100px",
-  }
-}
+  Reg: {
+    marginTop: "100px",
+  },
+};
 
 export default Register;
