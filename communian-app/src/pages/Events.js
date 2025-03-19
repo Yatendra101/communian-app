@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../context/AuthContext";
-import EventCard from "../components/EventCard";  // Import EventCard
+import EventCard from "../components/EventCard"; // Import EventCard
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -14,7 +14,7 @@ const Events = () => {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/events");
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/events`);
       setEvents(res.data);
     } catch (error) {
       console.error("Error fetching events:", error);
@@ -28,7 +28,7 @@ const Events = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/events", newEvent, {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/events`, newEvent, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       setEvents([...events, res.data]);
@@ -76,12 +76,10 @@ const Events = () => {
   );
 };
 
-
 const styles = {
   Up: {
-    marginTop : "100px",
-  }
-}
-
+    marginTop: "100px",
+  },
+};
 
 export default Events;
