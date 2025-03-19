@@ -1,0 +1,47 @@
+.home-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    margin-top: 100px;
+  }
+  
+  .explore-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .about {
+    margin: 40px auto;
+    max-width: auto;
+    font-size: 1.5rem;
+    background-color: rgb(11, 17, 48);
+    padding-bottom: 15px;
+    padding-top: 2px;
+    color: antiquewhite;
+  }
+  
+  .cta {
+    margin: 40px auto;
+    max-width: 600px;
+    font-size: 1.5rem;
+    
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
