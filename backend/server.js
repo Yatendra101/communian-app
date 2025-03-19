@@ -77,6 +77,11 @@ app.get("/api/events", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
+
+
 // Add a new event (Protected Route)
 app.post("/api/events", async (req, res) => {
   try {
